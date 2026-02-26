@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@tailwindcss base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   :root{
+
+    --cream: 40 33% 96%;
+    --cream-dark: 35 30% 92%;
+    --rose: 350 60% 65%;
+    --rose-light: 350 50% 92%;
+    --rose-dark: 350 65% 50%;
+    --charcoal: 30 10% 20%;
+    --charcoal-light: 30 10% 40%;
+    --gold: 38 60% 55%;
+    --gold-light: 38 50% 85%;
+      /* Warm cream background */
+    --background: 40 33% 98%;
+    --foreground: 30 10% 15%;
+
+    /* Card surfaces - slightly warmer */
+    --card: 40 40% 97%;
+    --card-foreground: 30 10% 15%;
+
+    /* Popover */
+    --popover: 40 40% 99%;
+    --popover-foreground: 30 10% 15%;
+
+    /* Primary - Soft Rose Pink */
+    --primary:350 60% 65%;
+    --primary-foreground:0 0% 100%;
+
+    /* Secondary - Warm Beige */
+    --secondary: 35 30% 92%;
+    --secondary-foreground: 30 10% 20%;
+
+    /* Muted tones */
+    --muted: 35 20% 94%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Accent - Golden */
+    --accent: 35 45% 85%;
+    --accent-foreground: 30 15% 20%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders */
+    --border: 35 25% 88%;
+    --input: 35 25% 88%;
+    --ring: 350 60% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --cream: 40 33% 96%;
+    --cream-dark: 35 30% 92%;
+    --rose: 350 60% 65%;
+    --rose-light: 350 50% 92%;
+    --rose-dark: 350 65% 50%;
+    --charcoal: 30 10% 20%;
+    --charcoal-light: 30 10% 40%;
+    --gold: 38 60% 55%;
+    --gold-light: 38 50% 85%;
+
+    /* Sidebar */
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 30 10% 25%;
+    --sidebar-primary: 350 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 30% 92%;
+    --sidebar-accent-foreground: 30 10% 20%;
+    --sidebar-border: 35 25% 88%;
+    --sidebar-ring: 350 60% 65%;
+
+    --font-display: 'Lato', sans-serif;
+   }
+   html {
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+
+  }
+    body {
+   
+    font-family: 'Lato', sans-serif;
+  }
+
+  .font-display{
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+@theme {
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-rose: hsl(var(--rose));
+  --color-rose-light:hsl(--rose-light)
+  --color-foreground: hsl(var(--foreground));
+  --font-display: var(--font-display);
+
+  
+  /* Add others as needed */
+}
+
+@layer components{
+    .font-display{
+        font-family: 'Cormorant Garamond', sans-serif;;
+    }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
