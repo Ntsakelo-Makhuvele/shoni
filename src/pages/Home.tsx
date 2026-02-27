@@ -7,6 +7,7 @@ import pastries from '../assets/pastries-featured.jpg'
 import { ArrowRight, Cake, Heart, Truck, Star, Eye } from 'lucide-react';
 
 import { Link } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
 
 const features = [
   {
@@ -51,6 +52,33 @@ const categories = [
     description: 'Fresh-baked delights daily',
   },
 ];
+
+const bestSellers = [
+  {
+    name:'Classic Chocolate',
+    description:'Rich layers of chocolate sponge with velvety ganache frosting, decorate',
+    startPrice:350,
+    image:chocolateCake,
+    category:'Birthday',
+    id: 1
+  },
+  {
+    name:'Classic Chocolate',
+    description:'Rich layers of chocolate sponge with velvety ganache frosting, decorate',
+    startPrice:350,
+    image:chocolateCake,
+    category:'Birthday',
+    id: 2
+  },
+  {
+    name:'Classic Chocolate',
+    description:'Rich layers of chocolate sponge with velvety ganache frosting, decorate',
+    startPrice:350,
+    image:chocolateCake,
+    category:'Wedding',
+    id: 3
+  },
+]
 
 const Home = () => {
     return (
@@ -126,57 +154,14 @@ const Home = () => {
                  
                   </div>
             </section>
-            <section className="mt-30 min-h-100 h-full bg-gradient-rose grid items-center p-20">
-               <div className="max-w-[1200px] w-[95%] m-auto min-h-90 h-full p-3">
+            <section className="mt-30 min-h-100 h-full bg-gradient-rose grid items-center md:p-20">
+               <div className="max-w-[1200px] w-full m-auto min-h-90 h-full p-3">
                 <p className="bg-white w-[fit-content] p-1 px-2 rounded-full text-primary">Customer Favorites</p>
                 <h1 className="text-4xl py-4 font-bold">Best Sellers</h1>
                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6">
-                  <div className="group h-80 rounded-3xl overflow-hidden card-elegant">
-                      <div className="h-40  relative">
-                          <img src={chocolateCake} alt=""  className="absolute w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>  
-                          <Link to="/" className="absolute text-sm bottom-0 mb-5 w-[80%] text-center ml-[10%] p-2 bg-primary rounded-full text-white opacity-[0] group-hover:opacity-[1] translate-y-2 group-hover:translate-y-0 transition duration-300 ease-in-out"> <Eye size={15} className="inline relative bottom-0.5 mr-2"/>View Details</Link> 
-                      </div>
-                      <div className="p-2">
-                          <h6 className="text-xl text-center font-bold">Classic Choclate</h6>
-                          <p className="line-clamp-2 max-h-12 text-center">Rich layers of chocolate sponge with velvety ganache frosting, decorate</p>
-                          <div className="mt-10 grid grid-cols-2">
-                             <h3 className="text-lg">FROM R350.00</h3>
-                             <p className="text-right text-sm w-[fit-content] ml-auto p-1 rounded-full text-foreground-muted bg-muted">Birthday</p>
-                          </div>
-                      </div>
-                      
-                  </div>
-                    <div className="group h-80 rounded-3xl overflow-hidden card-elegant">
-                      <div className="h-40 relative">
-                          <img src={chocolateCake} alt=""  className="absolute w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>  
-                          <Link to="/" className="absolute text-sm bottom-0 mb-5 w-[80%] text-center ml-[10%] p-2 bg-primary rounded-full text-white opacity-[0] group-hover:opacity-[1] translate-y-2 group-hover:translate-y-0 transition duration-300 ease-in-out"> <Eye size={15} className="inline relative bottom-0.5 mr-2"/>View Details</Link> 
-                      </div>
-                      <div className="p-2">
-                          <h6 className="text-xl text-center font-bold">Classic Choclate</h6>
-                          <p className="line-clamp-2 max-h-12 text-center">Rich layers of chocolate sponge with velvety ganache frosting, decorate</p>
-                          <div className="mt-10 grid grid-cols-2">
-                             <h3 className="text-lg">FROM R350.00</h3>
-                             <p className="text-right text-sm w-[fit-content] ml-auto p-1 rounded-full text-foreground-muted bg-muted">Birthday</p>
-                          </div>
-                      </div>
-                      
-                  </div>
-                    <div className="group h-80 rounded-3xl overflow-hidden card-elegant">
-                      <div className="h-40 relative">
-                          <img src={chocolateCake} alt=""  className="absolute w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>  
-                          <Link to="/" className="absolute text-sm bottom-0 mb-5 w-[80%] text-center ml-[10%] p-2 bg-primary rounded-full text-white opacity-[0] group-hover:opacity-[1] translate-y-2 group-hover:translate-y-0 transition duration-300 ease-in-out"> <Eye size={15} className="inline relative bottom-0.5 mr-2"/>View Details</Link> 
-                      </div>
-                      <div className="p-2">
-                          <h6 className="text-xl text-center font-bold">Classic Choclate</h6>
-                          <p className="line-clamp-2 max-h-12 text-center">Rich layers of chocolate sponge with velvety ganache frosting, decorate</p>
-                          <div className="mt-10 grid grid-cols-2">
-                             <h3 className="text-lg">FROM R350.00</h3>
-                             <p className="text-right text-sm w-[fit-content] ml-auto p-1 rounded-full text-foreground-muted bg-muted">Birthday</p>
-                          </div>
-                      </div>
-                      
-                  </div>
-          
+                {bestSellers.map((product,index) => (
+                  <ProductCard startPrice={product.startPrice} image={product.image} category={product.category} description={product.description} name={product.name} id={product.id}/> 
+                ))}
                </div>
                </div>
                <div className="border mt-30 bg-foreground p-10">
