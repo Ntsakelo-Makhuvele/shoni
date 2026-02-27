@@ -12,6 +12,7 @@ interface Product{
 
 const ProductCard = (product:Product) => {
     return(
+            <div>
              <div className="group h-110 rounded-3xl overflow-hidden card-elegant" key={product.id}>
                       <div className="h-70  relative">
                           <img src={product.image} alt=""  className="absolute w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>  
@@ -22,10 +23,12 @@ const ProductCard = (product:Product) => {
                           <p className="line-clamp-2 max-h-12 text-center">{product.description}</p>
                           <div className="mt-10 grid grid-cols-2">
                              <h3 className="text-lg">FROM R{product.startPrice.toFixed(2)}</h3>
-                             <p className="text-right text-sm w-[fit-content] ml-auto p-1 rounded-full text-foreground-muted bg-muted">{product.category}</p>
+                             <p className="text-right text-sm w-[fit-content] ml-auto p-1 px-2 rounded-full text-foreground-muted bg-muted">{product.category}</p>
                           </div>
                       </div>                    
                   </div>  
+                
+            </div>
     )
 }
 

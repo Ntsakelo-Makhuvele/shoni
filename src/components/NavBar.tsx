@@ -1,6 +1,9 @@
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { ShoppingBag } from 'lucide-react';
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -13,16 +16,16 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="bg-white">
+        <div className="bg-white fixed left-0 right-0 top-0 z-70">
               <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
+        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8 z-1 bg-white">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
+                src={logo}
+                className="h-12 w-auto"
               />
             </a>
           </div>
@@ -44,9 +47,9 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+                <Link to="/">
+                  <ShoppingBag />
+                  </Link>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -84,12 +87,9 @@ const Navbar = () => {
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                  <Link to="/">
+                  <ShoppingBag />
+                  </Link>
                 </div>
               </div>
             </div>
