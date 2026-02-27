@@ -110,12 +110,11 @@
   --color-primary-foreground: hsl(var(--primary-foreground));
   --color-secondary: hsl(var(--secondary));
   --color-rose: hsl(var(--rose));
-  --color-rose-light:hsl(--rose-light)
+  --color-rose-light:hsl(--rose-light);
   --color-foreground: hsl(var(--foreground));
   --font-display: var(--font-display);
-
-  
-  /* Add others as needed */
+  --color-foreground-muted:hsl(var(--muted-foreground));
+  --color-muted:hsl(var(--muted))
 }
 
 @layer components{
@@ -135,8 +134,27 @@
   }
 }
 
+.card-elegant{
+  background-color: hsl(var(--card));
+}
+
+  .bg-gradient-rose {
+    background: linear-gradient(135deg, hsl(var(--rose-light)) 0%, hsl(var(--cream)) 100%);
+  }
+
 .animate-fadeInUp {
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+.animate:hover .arrow{
+  transform: translateX(5px);
+  transition: all 0.2s linear;
+}
+
+.arrow{
+  transform: translateX(0px);
+  transition: all 0.1s linear;
+}
+
 
 .stagger-1 { animation-delay: 0.1s; }
