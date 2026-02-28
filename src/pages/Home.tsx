@@ -4,7 +4,7 @@ import birthdayCake from '../assets/birthday-cake-featured.jpg';
 import weddingCake from '../assets/wedding-cake-featured.jpg';
 import chocolateCake from '../assets/chocolate-cake.jpg';
 import pastries from '../assets/pastries-featured.jpg'
-import { ArrowRight, Cake, Heart, Truck, Star, Eye } from 'lucide-react';
+import { ArrowRight, Cake, Heart, Truck, Star } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
@@ -159,7 +159,7 @@ const Home = () => {
                 <p className="bg-white w-[fit-content] p-1 px-2 rounded-full text-primary">Customer Favorites</p>
                 <h1 className="text-4xl py-4 font-bold">Best Sellers</h1>
                <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6">
-                {bestSellers.map((product,index) => (
+                {bestSellers.map((product) => (
                   <ProductCard startPrice={product.startPrice} image={product.image} category={product.category} description={product.description} name={product.name} id={product.id}/> 
                 ))}
                </div>

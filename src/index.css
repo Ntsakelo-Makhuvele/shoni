@@ -116,6 +116,7 @@
   --color-foreground-muted:hsl(var(--muted-foreground));
   --color-muted:hsl(var(--muted));
   --color-border:hsl(var(--border));
+  --color-card:hsl(--card);
 }
 
 @layer components{
@@ -137,6 +138,7 @@
 
 .card-elegant{
   background-color: hsl(var(--card));
+  box-shadow: 0 4px 20px -5px hsl(var(--charcoal) / 0.08);
 }
 
   .bg-gradient-rose {
