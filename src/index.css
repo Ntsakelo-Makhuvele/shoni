@@ -134,11 +134,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
+  .bg-gradient-rose {
+    background: linear-gradient(135deg, hsl(var(--rose-light)) 0%, hsl(var(--cream)) 100%);
+  }
 .card-elegant{
-  background-color: hsl(var(--card));
-  box-shadow: 0 4px 20px -5px hsl(var(--charcoal) / 0.08);
+  background-color: hsl(var(--card)/0.6);
+  box-shadow: 0 4px 20px -5px hsl(var(--charcoal) / 0.2);
 }
 
   .bg-gradient-rose {
@@ -188,4 +192,10 @@
   color: white;
   background-color: hsl(var(--primary));
    border-color: hsl(var(--primary));
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  font-size: 20px;
+  opacity: 0;
 }

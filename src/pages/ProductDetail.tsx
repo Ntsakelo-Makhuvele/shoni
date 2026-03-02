@@ -1,4 +1,4 @@
-import Navbar from "../components/NavBar"
+import Navbar from "../components/ui/NavBar"
 import {Minus,Plus} from 'lucide-react'
 import cake from '../assets/chocolate-cake.jpg'
 

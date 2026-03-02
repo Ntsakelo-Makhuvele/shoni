@@ -1,7 +1,7 @@
-import Navbar from "../components/NavBar";
+import Navbar from "../components/ui/NavBar";
 import cake from '../assets/chocolate-cake.jpg'
 import { Minus, Plus, Trash2 } from "lucide-react";
-import { Button } from "@headlessui/react";
+
 
 const Cart = () => {
     return (
@@ -23,8 +23,8 @@ const Cart = () => {
                                      <p className="text-xl font-bold block">R3500</p>
                                      <div className="w-[fit-content] mt-2">
                                         <div className="flex border border-2 border-muted rounded-lg">
-                                            <button className="text-lg hover:bg-muted cursor-pointer px-1"><Trash2 className="w-5" /></button>
-                                            <input type="text" name="" id="" className="w-10 px-3 text-center text-md font-bold" defaultValue={1} value={1} />
+                                            <button className="text-lg hover:bg-muted cursor-pointer px-1"><Minus className="w-5" /></button>
+                                            <input type="text" name="" id="" className="w-10 px-3 text-center text-md font-bold" defaultValue={1} value={2} />
                                             <button className="text-lg hover:bg-muted cursor-pointer px-1"><Plus className="w-5" /></button>
                                         </div>
                                     </div>

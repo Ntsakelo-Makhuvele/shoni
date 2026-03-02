@@ -1,4 +1,4 @@
-import Navbar from "../components/NavBar";
+import Navbar from "../components/ui/NavBar";
 import heroCake from '../assets/hero-cake.jpg';
 import birthdayCake from '../assets/birthday-cake-featured.jpg';
 import weddingCake from '../assets/wedding-cake-featured.jpg';
@@ -7,7 +7,7 @@ import pastries from '../assets/pastries-featured.jpg'
 import { ArrowRight, Cake, Heart, Truck, Star } from 'lucide-react';
 
 import { Link } from "react-router-dom";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ui/ProductCard";
 
 const features = [
   {
